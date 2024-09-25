@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<title>Calculating area of the basic Shape</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Finding Areas</h1>
+    <h3>Square</h3>
+<form>
+    <label for="Dimension">Enter the dimension of the Square:</label>
+    <input type="number" name="Dimension" id="s"><br><br>
+    <button type="button" onclick="squarecalling()">Calculate</button>
+</form>
+<p id="demo1"></p>
+<h3>Rectangle</h3>
+<form>
+<label for="Dimension">Enter the dimension of the Rectangle(length):</label>
+<input type="number" name="Dimension" id="rl"><br><br>
+<label for="Dimension">Enter the dimension of the Rectangle(breadth):</label>
+<input type="number" name="Dimension" id="rb"><br><br>
+<button type="button" onclick="rectanglecalling()">Calculate</button>
+</form>
+<p id="demo2"></p>
+<h3>Triangle</h3>
+<form>
+    <label for="Dimension">Enter the dimension of the Triangle(base):</label>
+    <input type="number" name="Dimension" id="tb"><br><br>
+    <label for="Dimension">Enter the dimension of the Triangle(height):</label>
+    <input type="number" name="Dimension" id="th"><br><br>
+    <button type="button" onclick="trianglecalling()">Calculate</button>
+</form>
+<p id="demo3"></p>
+
+<h3>Circle</h3>
+
+<form>
+    <label for="Dimension">Enter the radius of the circle:</label>
+    <input type="number" name="Dimension" id="c"><br><br>
+    <button type="button" onclick="circlecalling()">Calculate</button>
+</form>
+    <p id="demo4"></p>
+
+<script>
+    function square(){
+        let a = document.getElementById('s');
+        let x = parseInt(a.value)
+        return x*x;
+    }
+    function squarecalling(){
+     document.getElementById('demo1').innerHTML = "The area of the square is " + square()
+    }
+
+    function rectangle(){
+        let l = document.getElementById('rl');
+        let x = parseInt(l.value)
+        let b = document.getElementById('rb');
+        let y = parseInt(b.value)
+        return x*y;
+        
+    }
+    function rectanglecalling(){
+     document.getElementById('demo2').innerHTML = "The area of the rectangle is " + rectangle()
+    }
+    function Triangle(){
+        let l = document.getElementById('tb');
+        let x = parseInt(l.value)
+        let b = document.getElementById('th');
+        let y = parseInt(b.value)
+        return 0.5*x*y;
+        
+    }
+    function trianglecalling(){
+     document.getElementById('demo3').innerHTML = "The area of the triangle is " + Triangle()
+    }
+
+    function circle(){
+        let l = document.getElementById('c');
+        let x = parseInt(l.value)
+        return 3.14 * x * x;
+        
+    }
+    function circlecalling(){
+     document.getElementById('demo4').innerHTML = "The area of the circle is " + circle()
+    }
+</script>
+</body>
